@@ -200,7 +200,7 @@ The main.jsx file is the entry point of the application and renders the App comp
 
 
 ## Screenshot
-![my work](src/assets/Screen.jpg)
+![my work](/src/assets/Screen.jpg)
 
 ## What I Learned
 It is very hard to get a screenshot to display in the README.md file.
