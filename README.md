@@ -35,5 +35,5 @@ I added the BlogList component which displays a list of blog posts.
 I added the posts.js file which con tains an array of sets of blog posts.
 
 ## Screenshots
-![my work](/src/assets/Assignment1_Desktop.jpg)
-![my work](/src/assets/Assignment1_Mobile.jpg)
+![my work](/src/assets/Assignment1_desktop.jpg)
+![my work](/src/assets/Assignment1_mobile.jpg)
