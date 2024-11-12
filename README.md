@@ -157,8 +157,8 @@ git commit -m "Initial commit: Project setup with Header component"
 git remote add origin [YOUR_GITHUB_REPO_URL]
 git branch -M main
 git push -u origin main
-```
 
+````
 ## 📤 Submission Requirements
 
 ### Required Files
@@ -175,7 +175,7 @@ Your submission must include:
 4. All code pushed to GitHub
 
 ### README.md Template
-```markdown
+markdown
 # My React Blog
 
 A blog platform built with React and Vite.
@@ -205,7 +205,7 @@ The main.jsx file is the entry point of the application and renders the App comp
 ## What I Learned
 It is very hard to get a screenshot to display in the README.md file.
 I learned how to get dark mode to work in the header component.
-```
+
 
 ### GitHub Repository Structure
 ```
