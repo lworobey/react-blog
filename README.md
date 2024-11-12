@@ -175,7 +175,7 @@ Your submission must include:
 4. All code pushed to GitHub
 
 ### README.md Template
-```markdown
+markdown
 # My React Blog
 
 A blog platform built with React and Vite.
