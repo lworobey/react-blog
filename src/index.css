@@ -1,8 +1,6 @@
-/* Light Mode (default) */
 .blog-header {
   padding: 1rem;
-  background-color: white;
-  color: black; /* Default text color */
+  background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
 }
 
@@ -20,23 +18,5 @@
 
 .blog-header nav a {
   text-decoration: none;
-  color: #666; /* Default link color */
-}
-
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  .blog-header {
-    background-color: black;
-    color: white;
-  }
-
-
-  .blog-header h1 {
-    color: white; 
-  }
-
-  
-  .blog-header nav a {
-    color: white; 
-  }
+  color: #666;
 }
