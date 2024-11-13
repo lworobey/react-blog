@@ -2,7 +2,7 @@ export const posts = [
     {
       id: 1,
       title: "Getting Started with React",
-      content: "React is a powerful library for building user interfaces...",
+      content: "React is a powerful library for building user interfaces... \nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react",
       author: "Jane Doe",
       date: "2024-03-15",
       readTime: 5
@@ -11,7 +11,7 @@ export const posts = [
       id: 2,
       title: "Understanding Props",
       content: "Props are the way we pass data between React components...",
-      author: "John Smith",
+      author: "John Smith", 
       date: "2024-03-16",
       readTime: 3
     },
@@ -23,4 +23,4 @@ export const posts = [
         date: "2024-11-12",
         readTime: 7
     }
-  ];
+];

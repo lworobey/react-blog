@@ -1,7 +1,3 @@
-### README.md Template
-markdown
-# My React Blog
-
 This is a blog built with React and Vite.
 
 ## Setup Instructions
@@ -24,6 +20,7 @@ I learned how to get a screenshot to display in the README.md file.
 I learned how to get dark mode to work in the header component.
 
 ## Screenshot
+
 ![my work](/src/assets/Screen.jpg)
 
 ## Styling Approach

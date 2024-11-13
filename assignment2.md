@@ -217,7 +217,7 @@ function BlogPost({ id, title, content, author, date }) {
       
       <div className="blog-post__content">
         <p>{displayContent}</p>
-        {content.length > 200 && (
+        {content.length < 200 && (
           <button 
             onClick={toggleContent}
             className="blog-post__expand"
