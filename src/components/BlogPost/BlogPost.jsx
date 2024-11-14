@@ -5,7 +5,6 @@ import LikeButton from '../LikeButton/LikeButton';
 import CommentSection from '../CommentSection/CommentSection';
 import { calculateReadTime } from '../../utils/readTime';
 
-
 function BlogPost({id, title, content, author, date}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [readTime, setReadTime] = useState(0);
@@ -55,12 +54,12 @@ function BlogPost({id, title, content, author, date}) {
 
 
 BlogPost.propTypes = {
-
-    title: PropTypes.string.required,
-    content: PropTypes.string.required,
-    author: PropTypes.string.required,
-    date: PropTypes.string.required,
-    readTime: PropTypes.number.required
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    readTime: PropTypes.number.isRequired
 };
 
 export default BlogPost;    
