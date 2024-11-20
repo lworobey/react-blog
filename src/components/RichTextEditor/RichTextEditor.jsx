@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from "react";
+import PropTypes from "prop-types";
 //import './RichTextEditor.css';
+
 
 function RichTextEditor({ value, onChange, error }) {
   const [selection, setSelection] = useState(null);
@@ -8,7 +9,7 @@ function RichTextEditor({ value, onChange, error }) {
   const handleFormat = (format) => {
     if (!selection) return;
 
-    const textarea = document.querySelector('.rich-editor__content');
+    const textarea = document.querySelector(".rich-editor__content");
     const start = selection.start;
     const end = selection.end;
     const text = value;
@@ -28,6 +29,7 @@ function RichTextEditor({ value, onChange, error }) {
         return;
     }
 
+
     onChange(newText);
     textarea.focus();
   };
@@ -35,43 +37,44 @@ function RichTextEditor({ value, onChange, error }) {
   const handleSelect = (e) => {
     setSelection({
       start: e.target.selectionStart,
-      end: e.target.selectionEnd
+      end: e.target.selectionEnd,
     });
   };
 
   return (
     <div className="rich-editor">
+      <label htmlFor="content">Content *</label>
       <div className="rich-editor__toolbar">
-        <button 
-          type="button" 
-          onClick={() => handleFormat('bold')}
+        
+        <button
+          type="button"
+          onClick={() => handleFormat("bold")}
           className="toolbar-button"
         >
           B
         </button>
-        <button 
-          type="button" 
-          onClick={() => handleFormat('italic')}
+        <button
+          type="button"
+          onClick={() => handleFormat("italic")}
           className="toolbar-button"
         >
           I
         </button>
-        <button 
-          type="button" 
-          onClick={() => handleFormat('heading')}
+        <button
+          type="button"
+          onClick={() => handleFormat("heading")}
           className="toolbar-button"
         >
           H
         </button>
       </div>
       <textarea
-        className={`rich-editor__content ${error ? 'error' : ''}`}
+        className={`rich-editor__content ${error ? "error" : ""}`}
         value={value}
-        onChange={e => onChange(e.target.value)}
+        onChange={(e) => onChange(e.target.value)}
         onSelect={handleSelect}
         rows="10"
       />
-      {error && <span className="error-message">{error}</span>}
     </div>
   );
 }
@@ -79,7 +82,8 @@ function RichTextEditor({ value, onChange, error }) {
 RichTextEditor.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
 
 export default RichTextEditor;
+
