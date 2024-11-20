@@ -56,19 +56,19 @@ function PostEditor() {
     }));
   };
   const handleImageChange = (e) => {
-    const file = e.target.files[0]; // Get the selected file
+    const file = e.target.files[0];
     if (file) {
-      const reader = new FileReader(); // Create a FileReader instance to read the image file
+      const reader = new FileReader(); 
       reader.onloadend = () => {
         setFormData((prev) => ({
           ...prev,
-          image: reader.result // Save the image as a base64 string in the form data
+          image: reader.result 
         }));
       };
-      reader.readAsDataURL(file); // Read the file as a base64 string
+      reader.readAsDataURL(file); 
     }
   };
-  // Handle Blur
+ 
   const handleBlur = (e) => {
     const { name, value } = e.target;
     setErrors((prev) => ({
@@ -77,11 +77,11 @@ function PostEditor() {
     }));
   };
 
-  // Handle Submit (for both "Save Draft" and "Publish")
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate all fields
+   
     const newErrors = {};
     Object.keys(formData).forEach((key) => {
       const error = validateField(key, formData[key]);
@@ -91,13 +91,13 @@ function PostEditor() {
 
     if (Object.keys(newErrors).length === 0) {
       if (formData.isPublished) {
-        // Handle publishing
+       
         console.log('Form Published:', formData);
 
-        // Simulate publishing by adding the post to the published posts list (no persistence)
+       
         setPublishedPosts((prevPosts) => [...prevPosts, formData]);
 
-        // Reset form data and clear localStorage draft
+       
         setFormData({
           title: '',
           content: '',
@@ -107,17 +107,17 @@ function PostEditor() {
           image: null
         });
         localStorage.removeItem('formData');
-        setIsDirty(false); // Reset dirty flag
+        setIsDirty(false); 
       } else {
-        // Save Draft
+      
         console.log('Draft Saved!');
         localStorage.setItem('formData', JSON.stringify(formData));
-        setIsDirty(false); // Reset dirty flag after saving draft
+        setIsDirty(false); 
       }
     }
   };
 
-  // Render the list of published posts
+ 
   const renderPublishedPosts = () => {
     if (publishedPosts.length === 0) {
       return <p>No posts published yet.</p>;

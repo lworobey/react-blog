@@ -3,6 +3,7 @@ import BlogList from './components/BlogList/BlogList';
 import { posts } from './data/posts';
 import PostEditor from './components/PostEditor/PostEditor';
 import './App.css';
+import RichTextEditor from './components/RichTextEditor/RichTextEditor';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main className="main-content">
         <BlogList posts={posts} />
         <PostEditor />
+        <RichTextEditor />
       </main>
     </div>
   );

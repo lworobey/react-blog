@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import './RichTextEditor.css';
+//import './RichTextEditor.css';
 
 function RichTextEditor({ value, onChange, error }) {
   const [selection, setSelection] = useState(null);
