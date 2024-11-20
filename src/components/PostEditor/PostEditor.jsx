@@ -3,6 +3,7 @@ import './PostEditor.css';
 import TagInput from '../TagInput/TagInput';
 import useUnsavedChanges from '../../hooks/useUnsavedChanges';
 import ReactMarkdown from 'react-markdown';
+import RichTextEditor from '../RichTextEditor/RichTextEditor';
 
 function PostEditor() {
   // Initial form data from localStorage (for draft persistence)
@@ -10,7 +11,7 @@ function PostEditor() {
     title: '',
     content: '',
     tags: [],
-    category: '',
+    category: 'general',
     isPublished: false,
     image: null
   };
@@ -130,7 +131,7 @@ function PostEditor() {
             <img src={post.image} alt="Post Preview" className="image-preview" />
           </div>
         )}
-         <ReactMarkdown>{post.content}</ReactMarkdown>
+        <ReactMarkdown>{post.content}</ReactMarkdown>
         <p><strong>Category:</strong> {post.category}</p>
         <p><strong>Tags:</strong> {post.tags.join(', ')}</p>
       </div>
@@ -174,15 +175,10 @@ function PostEditor() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="content">Content *</label>
-          <textarea
-            id="content"
-            name="content"
+          <RichTextEditor
             value={formData.content}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            rows="10"
-            className={errors.content ? 'error' : ''}
+            onChange={(content) => handleChange({ target: { name: "content", value: content } })}
+            error={errors.content}
           />
           {errors.content && <span className="error-message">{errors.content}</span>}
         </div>
@@ -223,6 +219,7 @@ function PostEditor() {
             Publish immediately
           </label>
         </div>
+
 
         {/* Submit Button */}
         <button type="submit" className="submit-button">
