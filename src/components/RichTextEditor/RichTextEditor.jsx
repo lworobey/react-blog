@@ -1,12 +1,7 @@
-<<<<<<< Updated upstream
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import './RichTextEditor.css';
-=======
 import { useState } from "react";
 import PropTypes from "prop-types";
 //import './RichTextEditor.css';
->>>>>>> Stashed changes
+
 
 function RichTextEditor({ value, onChange, error }) {
   const [selection, setSelection] = useState(null);

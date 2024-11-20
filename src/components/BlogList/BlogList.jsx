@@ -22,14 +22,14 @@ function BlogList({ posts }) {
 BlogList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.required,
-      title: PropTypes.string.required,
-      content: PropTypes.string.required,
-      author: PropTypes.string.required,
-      date: PropTypes.string.required,
-      readTime: PropTypes.number.required
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      readTime: PropTypes.number.isRequired
     })
-  ).required
+  ).isRequired
 };
 
 export default BlogList;
