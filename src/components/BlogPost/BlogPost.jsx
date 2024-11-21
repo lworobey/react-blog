@@ -5,7 +5,9 @@ import LikeButton from '../LikeButton/LikeButton';
 import CommentSection from '../CommentSection/CommentSection';
 import { calculateReadTime } from '../../utils/readTime';
 
-function BlogPost({id, title, content, author, date}) {
+
+
+function BlogPost({id, title, content, author, date, tags, category}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [readTime, setReadTime] = useState(0);
 
@@ -28,6 +30,8 @@ function BlogPost({id, title, content, author, date}) {
         <div className={styles.meta}>
           <span className={styles.author}>By {author}</span>
           <time className={styles.date}>{date}</time>
+          <span className={styles.tags}> Tags: {tags.join(', ')}</span>
+          <span className={styles.category}> Category: {category}</span>
           <span className={styles.readTime}>{readTime} min read</span>
         </div>
       </div>
@@ -58,6 +62,8 @@ BlogPost.propTypes = {
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    category: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     readTime: PropTypes.number.isRequired
 };

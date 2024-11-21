@@ -1,0 +1,52 @@
+/* Ensure the body and html have full width and no margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container for the whole Blog List */
+.blog-list-container {
+  width: 70%; /* Make the blog list container smaller */
+  margin: 0 auto; /* Center the blog list horizontally */
+  display: block;
+  padding: 20px; /* Optional padding for better spacing */
+}
+
+/* Controls container */
+.blog-controls {
+  width: 50%; /* Make the controls container smaller */
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+
+.blog-controls input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.blog-controls select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Tags container */
+.blog-search- {
+  white-space: nowrap; 
+}
+
+
+.blog-filters {
+  display: inline-block; 
+  margin-right: 10px; 
+}

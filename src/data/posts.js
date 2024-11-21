@@ -4,7 +4,9 @@ export const posts = [
       title: "Getting Started with React",
       content: "React is a powerful library for building user interfaces... \nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react\nI love react",
       author: "Jane Doe",
-      date: "2024-03-15",
+      category: "general",
+      tags: ["React"],
+      date: "3/15/2024",
       readTime: 5
     },
     {
@@ -12,7 +14,9 @@ export const posts = [
       title: "Understanding Props",
       content: "Props are the way we pass data between React components...",
       author: "John Smith", 
-      date: "2024-03-16",
+      category: "general",
+      tags: ["React", "Components"],
+      date: "3/16/2024",
       readTime: 3
     },
     {
@@ -20,7 +24,9 @@ export const posts = [
         title: "Understanding State",
         content: "State is the way we manage data in React...",
         author: "Luke Worobey",
-        date: "2024-11-12",
+        category: "general",
+        tags: ["state", "React"],
+        date: "11/12/2024",
         readTime: 7
     }
 ];
