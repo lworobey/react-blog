@@ -5,13 +5,13 @@ import useUnsavedChanges from '../../hooks/useUnsavedChanges';
 import ReactMarkdown from 'react-markdown';
 import RichTextEditor from '../RichTextEditor/RichTextEditor';
 
-function PostEditor() {
+function PostEditor({publishPosts}) {
   // Initial form data from localStorage (for draft persistence)
   const initialFormData = JSON.parse(localStorage.getItem('formData')) || {
     title: '',
     content: '',
     tags: [],
-    category: 'general',
+    category: '',
     isPublished: false,
     image: null
   };
@@ -95,10 +95,16 @@ function PostEditor() {
        
         console.log('Form Published:', formData);
 
-       
-        setPublishedPosts((prevPosts) => [...prevPosts, formData]);
+        const newPost = {
+          ...formData,
+          date: new Date().toLocaleDateString(),  
+          author: 'John Doe'
+        };
 
-       
+        
+        setPublishedPosts((prevPosts) => [...prevPosts, newPost]);
+        publishPosts(newPost)
+
         setFormData({
           title: '',
           content: '',
@@ -139,7 +145,9 @@ function PostEditor() {
   };
 
   return (
+
     <div className="post-editor-container">
+
       {/* Post Editor Form */}
       <form onSubmit={handleSubmit} className="post-editor">
         <div className="form-group">
@@ -247,11 +255,7 @@ function PostEditor() {
         </div>
       </div>
 
-      {/* Published Posts */}
-      <div className="published-posts">
-        <h2>Published Posts</h2>
-        {renderPublishedPosts()}
-      </div>
+     
     </div>
   );
 }
