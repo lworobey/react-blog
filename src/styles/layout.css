@@ -1,0 +1,30 @@
+.layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .layout__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .layout__main {
+    min-width: 0;
+  }
+  
+  .layout__sidebar {
+    width: 300px;
+  }
+  
+  @media (max-width: 768px) {
+    .layout__content {
+      grid-template-columns: 1fr;
+    }
+  
+    .layout__sidebar {
+      width: 100%;
+    }
+  }

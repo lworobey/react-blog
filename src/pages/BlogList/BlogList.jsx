@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { useSearch } from '../../hooks/useSearch';
 import { useFilters } from '../../hooks/useFilters';
-import BlogSearch from '../BlogSearch/BlogSearch';
-import BlogFilters from '../BlogFilters/BlogFilters';
-import BlogPost from '../BlogPost/BlogPost';
-import Pagination from '../Pagination/Pagination';
+import BlogSearch from '../../components/BlogSearch/BlogSearch';
+import BlogFilters from '../../components/BlogFilters/BlogFilters';
+import BlogPost from '../../components/BlogPost/BlogPost';
+import Pagination from '../../components/Pagination/Pagination';
 import './BlogList.css';
+
 
 const POSTS_PER_PAGE = 5;
 
 function BlogList({ posts }) {
   const [currentPage, setCurrentPage] = useState(1);
+  
   
   const {
     filters,
