@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import BlogList from "./components/BlogList/BlogList";
+import BlogList from "./pages/BlogList/BlogList";
 import { posts as initialPosts } from "./data/posts";
 import PostEditor from "./components/PostEditor/PostEditor";
 import { useState } from "react";
